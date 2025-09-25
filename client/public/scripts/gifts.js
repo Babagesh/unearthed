@@ -72,5 +72,13 @@ document.title = `UnEarthed - ${gift.name}`
             giftContent.appendChild(message)
         }
 }
-renderGifts()
-renderGift()
+const requestedURL = parseInt(window.location.href.split('/').pop());
+if(requestedURL)
+{
+    window.location.href="../404.html"
+}
+else
+{
+    renderGifts();
+}
+renderGift();
