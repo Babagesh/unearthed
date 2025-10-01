@@ -1,4 +1,5 @@
 import pg from 'pg'
+import './dotenv.js'
 
 const config = {
     user: process.env.PGUSER,
@@ -12,4 +13,4 @@ const config = {
 
 }
 
-export const pool = pg.Pool(config)
+export const pool = new pg.Pool(config)
